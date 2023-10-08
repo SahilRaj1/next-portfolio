@@ -11,6 +11,33 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'type',
+      title: 'Type',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Language', value: 'language'},
+          {title: 'Frontend', value: 'frontend'},
+          {title: 'Backend', value: 'backend'},
+          {title: 'Database', value: 'database'},
+          {title: 'Machine Learning', value: 'ml'},
+          {title: 'Others', value: 'others'},
+        ]
+      }
+    }),
+    defineField({
+      name: 'rating',
+      title: 'rating',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Proficient', value: 'proficient'},
+          {title: 'Intermediate', value: 'intemediate'},
+          {title: 'Amateur', value: 'amateur'},
+        ]
+      }
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -18,11 +45,6 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
-    }),
-    defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'text',
     }),
     defineField({
       name: 'index',
@@ -33,11 +55,6 @@ export default defineType({
       name: 'image',
       title: 'Image',
       type: 'image',
-    }),
-    defineField({
-      name: 'jobRole',
-      title: 'Job Role',
-      type: 'string',
     }),
     defineField({
       name: 'projects',
