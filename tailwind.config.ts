@@ -14,6 +14,9 @@ const config: Config = {
       textColor: {
         'white': '#fff', // Text color set to white
       },
+      fontFamily: {
+        mono: ['Inconsolata', 'monospace'],
+      },
     },
   },
   plugins: [],
